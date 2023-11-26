@@ -43,7 +43,11 @@ mathjax:
   tags: "ams"              # "none", "ams" (default), "all"
 
 #For fonts
-
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
