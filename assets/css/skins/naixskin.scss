@@ -26,9 +26,17 @@ $code-background-color: tint($base-color, 95%) !default;
 $border-color: tint($base-color, 80%) !default;
 
 /* Fonts */
-$base-font-family: “AtariGames” !default;
-$base-font-size: 16px !default;
-$base-font-weight: 400 !default;
+$serif-font-family: "AtariGames";
+$sans-serif-font-family: "AtariGames";
+$monospace-font-family: "AtariGames";
+
+$base-font-family: $sans-serif-font-family;
+$headline-font-family: $sans-serif-font-family;
+$title-font-family: $serif-font-family;
+$description-font-family: $serif-font-family;
+$meta-font-family: $serif-font-family;
+
+
 
 
 $primary-color: #000 !default;
