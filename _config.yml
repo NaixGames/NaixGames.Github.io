@@ -42,11 +42,6 @@ mathjax:
   combo: "tex-svg"         # "tex-svg" (default), "tex-mml-chtml", etc.
   tags: "ams"              # "none", "ams" (default), "all"
 
-#For fonts
-google_fonts:
-  - name: "AtariGame"
-    weights: "400,400i,700,700i"
-
 # Footer Links
 footer_links:
   - title: Twitter
