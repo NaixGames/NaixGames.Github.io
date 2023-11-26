@@ -8,17 +8,24 @@ sitemap: false
 
 @import "so-simple";
 
+
 @font-face {
-  font-family: 'CustomFont';
+  font-family: "AtariGames";
   src:  url('../../AtariGames.ttf');
 }
 
-$serif-font-family: "CustomFont", serif;
-$sans-serif-font-family: "CustomFont", sans-serif;
-$monospace-font-family: "CustomFont", monospace;
+
+
+$serif-font-family: "AtariGames", serif;
+$sans-serif-font-family: "AtariGames", sans-serif;
+$monospace-font-family: "AtariGames", monospace;
 
 $base-font-family: $sans-serif-font-family;
 $headline-font-family: $sans-serif-font-family;
 $title-font-family: $serif-font-family;
 $description-font-family: $serif-font-family;
 $meta-font-family: $serif-font-family;
+
+body {
+  font-family: $base-font-family;
+}
