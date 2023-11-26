@@ -17,9 +17,9 @@ sitemap: false
 }
 
 /* Fonts */
-$serif-font-family: "AtariGames";
-$sans-serif-font-family: "AtariGames";
-$monospace-font-family: "AtariGames";
+$serif-font-family: "AtariGames", serif;
+$sans-serif-font-family: "AtariGames", sans-serif;
+$monospace-font-family: "AtariGames", monospace;
 
 $base-font-family: $sans-serif-font-family;
 $headline-font-family: $sans-serif-font-family;
