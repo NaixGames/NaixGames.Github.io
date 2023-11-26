@@ -11,7 +11,7 @@ sitemap: false
 
 @font-face {
   font-family: "CustomFont";
-  src:  url('../../assets/fonts/Bitfantasy.ttf');
+  src:  url('../../assets/fonts/TripleN.ttf');
   font-weight: 800;
 }
 
@@ -29,15 +29,20 @@ $meta-font-family: $serif-font-family;
 
 .site-description, {
   font-family: $base-font-family;
-  font-size: 24px;
+  font-size: 30px;
 }
 
-h1, h2, h3, h4, h5, .site-nav, body {
+body, {
   font-family: $base-font-family;
-  font-size: 48px;
+  font-size: 28px;
+}
+
+h1, h2, h3, h4, h5, .site-nav, h1.page-title, {
+  font-family: $base-font-family;
+  font-size: 40px;
 }
 
 .site-title, {
   font-family: $base-font-family;
-  font-size: 72px;
+  font-size: 70px;
 }
