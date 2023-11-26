@@ -28,6 +28,8 @@ twitter_username: NaixL
 github_username: NaixGames
 logo: /images/NaixLogo.png
 skin: /assets/css/skins/naixskin.css
+locale: "en"
+date_format: "%d-%m-%Y"
 
 # Build settings
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
