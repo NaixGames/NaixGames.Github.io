@@ -27,7 +27,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NaixL
 github_username: NaixGames
 logo: /images/NaixLogo.png
-skin: /assets/css/skins/naixskin.css
+skin: /assets/css/skins/default.css
 locale: "en"
 date_format: "%d-%m-%Y"
 
