@@ -49,6 +49,15 @@ google_fonts:
   - name: "Lora"
     weights: "400,400i,700,700i"
 
+# Footer Links
+footer_links:
+  - title: Twitter
+    url: https://twitter.com/NaixL
+    icon: fab fa-twitter-square
+  - title: GitHub
+    url: https://github.com/NaixGames
+    icon: fab fa-github-square
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
