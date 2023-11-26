@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NaixL
 github_username: NaixGames
+logo: /images/NaixLogo.png
 
 # Build settings
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
