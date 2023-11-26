@@ -12,7 +12,7 @@ sitemap: false
 	font-family: "AtariGames";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../assets/fonts/AtariGames.ttf");
+	src: url("../assets/fonts/AtariGames.ttf") format("ttf");
 	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -21,8 +21,8 @@ $serif-font-family: "AtariGames";
 $sans-serif-font-family: "AtariGames";
 $monospace-font-family: "AtariGames";
 
-$base-font-family: "AtariGames";
-$headline-font-family:  "AtariGames";
-$title-font-family:  "AtariGames";
-$description-font-family:  "AtariGames";
-$meta-font-family:  "AtariGames";
+$base-font-family: $sans-serif-font-family;
+$headline-font-family: $sans-serif-font-family;
+$title-font-family: $serif-font-family;
+$description-font-family: $serif-font-family;
+$meta-font-family: $serif-font-family;
