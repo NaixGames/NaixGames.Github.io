@@ -1,6 +1,6 @@
 ---
 title: "Second tutorial"
- 
+layout: post 
 ---
 
 TUTORIAL TEST AGAING!

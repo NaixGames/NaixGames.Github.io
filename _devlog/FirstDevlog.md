@@ -1,9 +1,8 @@
 ---
+title: "First Devlog" 
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2023-11-25 18:43:07 +0000
-categories: jekyll update
 ---
+
 
 DEVLOG TEST
 

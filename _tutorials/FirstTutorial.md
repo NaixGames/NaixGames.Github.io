@@ -1,5 +1,6 @@
 ---
 title: "First tutorial" 
+layout: post
 ---
 
 TUTORIAL TEST

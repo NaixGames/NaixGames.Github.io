@@ -34,7 +34,19 @@ date_format: "%d-%m-%Y"
 # Build settings
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
+
+# Collections
+collections:
+  tutorials:
+    output: true
+    permalink: /:collection/:path/
+  devlog:
+    output: true
+    permalink: /:collection/:path/
 
 #MathJax for latex configuration
 mathjax:
