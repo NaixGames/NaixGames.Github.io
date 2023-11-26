@@ -19,6 +19,16 @@ $serif-font-family: "AtariGames", serif;
 $sans-serif-font-family: "AtariGames", sans-serif;
 $monospace-font-family: "AtariGames", monospace;
 
+
+body {
+  font-family: 'AtariGames', serif;
+  }
+
+h1, h2, h3, h4, h5, .site-title, .site-nav {
+  font-family: 'AtariGames', sans-serif;
+}
+
+
 $base-font-family: $sans-serif-font-family;
 $headline-font-family: $sans-serif-font-family;
 $title-font-family: $serif-font-family;
