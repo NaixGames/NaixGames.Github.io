@@ -10,15 +10,16 @@ sitemap: false
 
 
 @font-face {
-  font-family: "AtariGames";
-  src:  url('../../AtariGames.ttf');
+  font-family: "CustomFont";
+  src:  url('../../assets/fonts/Bitfantasy.ttf');
+  font-weight: 800;
 }
 
 
 
-$serif-font-family: "AtariGames", serif;
-$sans-serif-font-family: "AtariGames", sans-serif;
-$monospace-font-family: "AtariGames", monospace;
+$serif-font-family: "CustomFont", serif;
+$sans-serif-font-family: "CustomFont", sans-serif;
+$monospace-font-family: "CustomFont", monospace;
 
 $base-font-family: $sans-serif-font-family;
 $headline-font-family: $sans-serif-font-family;
@@ -26,6 +27,17 @@ $title-font-family: $serif-font-family;
 $description-font-family: $serif-font-family;
 $meta-font-family: $serif-font-family;
 
-body {
+.site-description, {
   font-family: $base-font-family;
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, .site-nav, body {
+  font-family: $base-font-family;
+  font-size: 48px;
+}
+
+.site-title, {
+  font-family: $base-font-family;
+  font-size: 72px;
 }
