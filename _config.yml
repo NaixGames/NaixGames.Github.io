@@ -27,6 +27,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NaixL
 github_username: NaixGames
 logo: /images/NaixLogo.png
+skin: /assets/css/skins/naixskin.css
 
 # Build settings
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
