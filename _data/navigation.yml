@@ -1,8 +1,10 @@
 - title: Games
   url: /games.html
-- title: DevLog
-  url: /devlog/
 - title: Tutorials
   url: /tutorials/
+- title: DevLogs
+  url: /devlog/
+- title: Links
+  url: /links.html
 - title: Contact
   url: /contact.html

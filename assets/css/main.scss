@@ -47,7 +47,7 @@ h3.entry-title{
   font-size: 50px !important;
 }
 
-span.page-pagination-title{
+span.page-pagination-title, a.u-url{
   font-family: $base-font-family;
   font-size: 20px !important; 
 }
@@ -56,3 +56,7 @@ span.page-pagination-title{
   font-family: $base-font-family;
   font-size: 70px;
 }
+
+.entry-image { width: 40%;  display: block; margin-left: auto;  margin-right: auto; }
+
+.page-image { width: 25%; display: block; margin-left: auto;  margin-right: auto;}
