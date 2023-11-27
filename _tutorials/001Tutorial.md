@@ -9,6 +9,15 @@ image:
   caption: "A dice on one"
   width: 50%
   height: 50%
+
+ categories:
+     -beginner
+     -math
+     -probability
+  tags:
+     -beginner
+     -math
+     -probability
 ---
 
 <h2> Why you think the RNG sucks.</h2>

@@ -8,7 +8,7 @@ usemathjax: true
 image: 
   path: tutorials/images/003InputButton.png 
   thumbnail: tutorials/images/003InputButton.png
-  caption: "A multiplication"
+  caption: "A button for input"
   categories:
      -beginner
      -coding
