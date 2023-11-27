@@ -37,6 +37,11 @@ body, {
   font-size: 28px;
 }
 
+em {
+  font-family: $base-font-family;
+  font-size: 24px;
+}
+
 h1, h2, h3, h4, h5, .site-nav, h1.page-title {
   font-family: $base-font-family;
   font-size: 40px;

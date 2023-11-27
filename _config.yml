@@ -49,10 +49,11 @@ collections:
     permalink: /:collection/:path/
 
 #MathJax for latex configuration
+markdown: kramdown
 mathjax:
   enable: true             # MathJax equations, e.g. true, false (default)
   combo: "tex-svg"         # "tex-svg" (default), "tex-mml-chtml", etc.
-  tags: "ams"              # "none", "ams" (default), "all"
+  tags: "all"              # "none", "ams" (default), "all"
 
 # Footer Links
 footer_links:
