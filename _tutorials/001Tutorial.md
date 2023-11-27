@@ -7,10 +7,7 @@ image:
   path: tutorials/images/001DiceOne.png 
   thumbnail: tutorials/images/001DiceOne.png
   caption: "A dice on one"
-  width: 50%
-  height: 50%
-
- categories:
+  categories:
      -beginner
      -math
      -probability
@@ -18,6 +15,7 @@ image:
      -beginner
      -math
      -probability
+
 ---
 
 <h2> Why you think the RNG sucks.</h2>

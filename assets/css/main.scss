@@ -32,7 +32,7 @@ $meta-font-family: $serif-font-family;
   font-size: 30px;
 }
 
-body, {
+body, p{
   font-family: $base-font-family;
   font-size: 28px;
   text-align: justify;
@@ -41,6 +41,7 @@ body, {
 em {
   font-family: $base-font-family;
   font-size: 24px;
+  text-align: justify;
 }
 
 h1, h2, h3, h4, h5, .site-nav, h1.page-title {
