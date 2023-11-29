@@ -5,4 +5,3 @@
 layout: home
 ---
 
-HERE I SHOULD PUT A SAMPLE OF EACH SUBSITE?
