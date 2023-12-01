@@ -67,3 +67,18 @@ span.page-pagination-title, a.u-url{
 .entry-image { width: 40%;  display: block; margin-left: auto;  margin-right: auto; }
 
 .page-image { width: 25%; display: block; margin-left: auto;  margin-right: auto;}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
