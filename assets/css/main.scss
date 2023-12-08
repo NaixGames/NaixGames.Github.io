@@ -29,39 +29,39 @@ $meta-font-family: $serif-font-family;
 
 .site-description, {
   font-family: $base-font-family;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 body, p{
-  font-family: $base-font-family;
-  font-size: 28px;
-  text-align: justify;
-}
-
-em {
   font-family: $base-font-family;
   font-size: 24px;
   text-align: justify;
 }
 
+em {
+  font-family: $base-font-family;
+  font-size: 20px;
+  text-align: justify;
+}
+
 h1, h2, h3, h4, h5, .site-nav, h1.page-title {
   font-family: $base-font-family;
-  font-size: 40px;
+  font-size: 36px;
 }
 
 h3.entry-title{
   font-family: $base-font-family;
-  font-size: 50px !important;
+  font-size: 46px !important;
 }
 
 span.page-pagination-title, a.u-url{
   font-family: $base-font-family;
-  font-size: 20px !important; 
+  font-size: 16px !important; 
 }
 
 .site-title, {
   font-family: $base-font-family;
-  font-size: 70px;
+  font-size: 66px;
 }
 
 .entry-image { width: 40%;  display: block; margin-left: auto;  margin-right: auto; }
