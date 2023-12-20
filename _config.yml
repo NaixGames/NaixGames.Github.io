@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Games, tutorials and devlogs all in one place!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: NaixL
+twitter_username: Naix_Games
 github_username: NaixGames
 logo: /images/NaixLogo.png
 skin: /assets/css/skins/default.css
@@ -61,11 +61,14 @@ mathjax:
 # Footer Links
 footer_links:
   - title: Twitter
-    url: https://twitter.com/NaixL
+    url: https://twitter.com/Naix_Games
     icon: fab fa-twitter-square
   - title: GitHub
     url: https://github.com/NaixGames
     icon: fab fa-github-square
+  - title: Discord
+    url: https://discord.com/invite/DZZHqAXBgA
+    icon: fab fa-discord
 
 # Exclude from processing.
 # The following items will not be processed, by default.
