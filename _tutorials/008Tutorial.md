@@ -211,7 +211,11 @@ implementation above should at least give you powerpoint.
 
 <h2> Some changes that could be made </h2>
 
-<h4> Have the presentation manager load all the slides from the start. </h4>
+<br>
+
+Have the presentation manager load all the slides from the start.
+
+<br>
 
 
 As I have mentioned before, the PresentationManager object has references to the slide "objects" in memory. An alternative is to have it so the PresentationManager does not instantiate the Slides,
@@ -223,9 +227,11 @@ slower, but the slides shouldn't be SO big that this issue even becomes noticeab
 
 Anyway, there is not a clear answer here, you can decide what approach fits you the best.
 
+<br>
 
-<h4> Have the PresentationManager deal with input. </h4>
+ Have the PresentationManager deal with input.
 
+<br>
 
 
 One dirty thing about my implementation is that the Slide deals with input. A cleaner way would be for the PresentationManager to deal with inputs, and give requests to the Slide go to the next bullet point or back. 
