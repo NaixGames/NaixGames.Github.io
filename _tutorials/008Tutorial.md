@@ -72,114 +72,109 @@ Without much more introduction, the PresentationManager:
 
 {% highlight ruby %}
 public partial class PresentationManager : Node
+{
+	[Export] private string[] mSlidesPaths; //This have the paths of the slides on your project
+	private int mSlideIndex=0;
+	private Node mActualSlide;
+	// --------------------------------------------------------------------
+
+	public override void _Ready()
 	{
-		[Export] private string[] mSlidesPaths; //This have the paths of the slides on your project
-		private int mSlideIndex=0;
-		private Node mActualSlide;
-
-		// --------------------------------------------------------------------
-
-		public override void _Ready()
-		{
-			mActualSlide = ResourceLoader.Load<PackedScene>(mSlidesPaths[0]).Instantiate(); 
-			this.AddChild(mActualSlide);
-			PresentationSlide slide = (PresentationSlide) mActualSlide;
-			slide.Initiate(this);
-		}
-
-		// --------------------------------------------------------------------
-
-		private void LoadIndexSlide(){
-			Node newActualScene = ResourceLoader.Load<PackedScene>(mSlidesPaths[mSlideIndex]).Instantiate(); 
-			
-			PresentationSlide slide = (PresentationSlide) newActualScene;
-			slide.Initiate(this);
-			
-			mActualSlide.QueueFree();
-			mActualSlide = newActualScene;
-
-			this.AddChild(mActualSlide);
-		}
-
-		// --------------------------------------------------------------------
-
-		public void LoadNextSlide(){
-			if (mSlideIndex==mSlidesPaths.Length-1){
-				return;
-			}
-			mSlideIndex++;
-			LoadIndexSlide();
-		}
-
-		// --------------------------------------------------------------------
-		
-		public void LoadNextSlide(){
-			//Similar as above. Do this on your own ;)
-		}
-
+		mActualSlide = ResourceLoader.Load<PackedScene>(mSlidesPaths[0]).Instantiate(); 
+		this.AddChild(mActualSlide);
+		PresentationSlide slide = (PresentationSlide) mActualSlide;
+		slide.Initiate(this);
 	}
+
+	// --------------------------------------------------------------------
+
+	private void LoadIndexSlide(){
+		Node newActualScene = ResourceLoader.Load<PackedScene>(mSlidesPaths[mSlideIndex]).Instantiate(); 
+		
+		PresentationSlide slide = (PresentationSlide) newActualScene;
+		slide.Initiate(this);
+			
+		mActualSlide.QueueFree();
+		mActualSlide = newActualScene;
+
+		this.AddChild(mActualSlide);
+	}
+
+	// --------------------------------------------------------------------
+
+	public void LoadNextSlide(){
+		if (mSlideIndex==mSlidesPaths.Length-1){
+			return;
+		}
+		mSlideIndex++;
+		LoadIndexSlide();
+	}
+
+	// --------------------------------------------------------------------
+		
+	public void LoadNextSlide(){
+		//Similar as above. Do this on your own ;)
+	}
+}
 {% endhighlight %}
 
 nothing new to comment on besides what was said in the last section. Now, the PresentationSlide is more interesting:
 
 {% highlight ruby %}
 public partial class PresentationSlide : Node
+{
+	private PresentationManager mPresentationManager;
+	private InputReaderAbstract mInput;
+	private List<BulletPoint> mBulletPoints = new List<BulletPoint>();
+	private int mBulletPointIndex = 0;
+
+	// --------------------------------------------------------------------
+
+		
+	public void Initiate(PresentationManager presentationManager)
 	{
-		private PresentationManager mPresentationManager;
-		private InputReaderAbstract mInput;
-		private List<BulletPoint> mBulletPoints = new List<BulletPoint>();
-		private int mBulletPointIndex = 0;
-
-		// --------------------------------------------------------------------
-
-		// Called when the node enters the scene tree for the first time.
-		public void Initiate(PresentationManager presentationManager)
-		{
-			//This automatically loads all bullet points to then go through them on the presentation.
-			foreach (Node node in this.GetChildren(false)){
-				if (node is BulletPoint){
-					BulletPoint bulletPoint = (BulletPoint) node;
-					mBulletPoints.Add(bulletPoint);
-				}
-			}
-
-			mInput = InputManager.Instance.GiveInput();
-			mPresentationManager = presentationManager;
-		}
-
-		// --------------------------------------------------------------------
-
-		public override void _Process(double delta)
-		{
-			if (mInput.IsButtonJustPressedInput("Next")){
-				if (mBulletPointIndex == -1){
-					mBulletPointIndex++;
-					return;
-				}
-				if (mBulletPointIndex<mBulletPoints.Count){
-					mBulletPoints[mBulletPointIndex].ShowBulletPoint();
-					mBulletPointIndex ++;
-					return;
-				}
-				mPresentationManager.LoadNextSlide();
-			}
-			if (mInput.IsButtonJustPressedInput("Back")){
-				if (mBulletPointIndex == mBulletPoints.Count){
-					mBulletPointIndex--;
-					return;
-				}
-				if (mBulletPointIndex>-1){
-					mBulletPoints[mBulletPointIndex].HideBulletPoint();
-					mBulletPointIndex --;
-					return;
-				}
-				mPresentationManager.LoadPreviousSlide();
+		//This automatically loads all bullet points to then go through them on the presentation.
+		foreach (Node node in this.GetChildren(false)){
+			if (node is BulletPoint){
+				BulletPoint bulletPoint = (BulletPoint) node;
+				mBulletPoints.Add(bulletPoint);
 			}
 		}
 
-		// --------------------------------------------------------------------
-
+		mInput = InputManager.Instance.GiveInput();
+		mPresentationManager = presentationManager;
 	}
+
+	// --------------------------------------------------------------------
+
+	public override void _Process(double delta)
+	{
+		if (mInput.IsButtonJustPressedInput("Next")){
+			if (mBulletPointIndex == -1){
+				mBulletPointIndex++;
+				return;
+			}
+			if (mBulletPointIndex<mBulletPoints.Count){
+				mBulletPoints[mBulletPointIndex].ShowBulletPoint();
+				mBulletPointIndex ++;
+				return;
+			}
+			mPresentationManager.LoadNextSlide();
+		}
+		if (mInput.IsButtonJustPressedInput("Back")){
+			if (mBulletPointIndex == mBulletPoints.Count){
+				mBulletPointIndex--;
+				return;
+			}
+			if (mBulletPointIndex>-1){
+				mBulletPoints[mBulletPointIndex].HideBulletPoint();
+				mBulletPointIndex --;
+				return;
+			}
+			mPresentationManager.LoadPreviousSlide();
+		}
+	}
+}
 {% endhighlight %}
 
 The input part needs to be adapted for your system and to how you deal with inputs. As you can see, this is pretty similar to the PresentationManager, with some caveats to adjust to bullet points. Also, with this implementation when you go back
@@ -188,28 +183,27 @@ Now, for the bullet point class itself, the simplest version for this:
 
 {% highlight ruby %}
 public partial class BulletPoint : Control
+{
+
+	// --------------------------------------------------------------------
+	public override void _Ready()
 	{
-
-		// --------------------------------------------------------------------
-		public override void _Ready()
-		{
-			this.Visible = false;
-		}
-
-		// --------------------------------------------------------------------
-
-		public virtual void ShowBulletPoint(){
-			this.Visible = true;
-		}
-
-		// --------------------------------------------------------------------
-
-		public virtual void HideBulletPoint(){
-			this.Visible = false;
-		}
-
-		// --------------------------------------------------------------------
+		this.Visible = false;
 	}
+
+	// --------------------------------------------------------------------
+
+	public virtual void ShowBulletPoint(){
+		this.Visible = true;
+	}
+
+	// --------------------------------------------------------------------
+
+	public virtual void HideBulletPoint(){
+		this.Visible = false;
+	}
+	// --------------------------------------------------------------------
+}
 {% endhighlight %}
 
 As you can see, the ShowBulletPoint() and HideBulletPoint() are marked as abstract, so inheriting classes can do another method if they like. You can go wild with what you do in ShowBulletPoint and HideBulletPoint. The very simplistic
@@ -217,7 +211,8 @@ implementation above should at least give you powerpoint.
 
 <h2> Some changes that could be made </h2>
 
-<h3> Have the presentation manager load all the slides from the start. </h3>
+<bf> Have the presentation manager load all the slides from the start. </bf>
+
 
 As I have mentioned before, the PresentationManager object has references to the slide "objects" in memory. An alternative is to have it so the PresentationManager does not instantiate the Slides,
 but rather have a reference to the Slide "game objects" and you add these objects manually to the PresentationManager game object.
