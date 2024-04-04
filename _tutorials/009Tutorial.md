@@ -45,7 +45,7 @@ In a third parallel world, cut is behind the tree. Making cut impossible to get!
 
 Randomizers are the idea of actually implementing tools to simulate games from those "parallel" worlds as I called them before. To explain this concept I will introduce some terminology that is common to randomizers.
 
-In what follows, we will refer to location as a place where an item could be. In our example, there are 3 locations, where the potion normally is, where cut normally is and where the train pass normally is. Note that locations are not necessarily places. Getting a reward from leveling up is also a location (even if it has no physical place).
+In what follows, we will refer to location as a place where an item could be. In our example, there are 3 locations, where the potion normally is, where cut normally is and where the train pass normally is. Note that locations are not necessarily places. Getting a reward from levelling up is also a location (even if it has no "physical place" in the game).
 
 An item is whatever the player can obtain from some location in the game. In our example, that is the potion, cut and the train pass. 
 
@@ -55,11 +55,10 @@ which item is found in which location. Note that the mod needs to make a decoupl
 Note, however, in that definition we are not constraining ourselves to cases where the game is beatable. As shown in our third example, it could be that we leave cut behind a tree, making it impossible to obtain (and most likely blocking the game at some point). Is because of this, that we might want to include some checks to ensure the randomizer gives us a beatable game. We call Logic the series of rules given to a randomizer that ensures it will give
 us a beatable game.
 
-As a final point of this section ... WHY? Why would anyone want this? There are a couple of reason, but I will speak for my experience. Randomizers change games you have played and loved so they feel fresh and stops you from "autopiloting" the game because you know it by heart.
+As a final point of this section ... WHY? Why would anyone want this? There are a couple of reasons, but I will speak for my experience. Randomizers change games you have played and loved so they feel fresh. It stops you from "autopiloting" the game, because you can't know it by heart (since it is randomized!). It is also a really fun experience! Same as games :P
 
 <h2> Multiworld randomizer </h2>
 
--> Servidor, cliente, logica, generacion (Remapeo procedural - yop2yop)
--> -> Animacion. (Pokemon + Mario 64)
--> Como funcionan mensajes en red (como se comunican cliente y servidor)
--> -> Animacion desde el PoV del servidor.
+Now you know what randomizers I can explain what a multiworld randomizer is.
+
+
