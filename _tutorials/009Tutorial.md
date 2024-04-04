@@ -1,5 +1,5 @@
 ---
-title: "A tale down the archipelago part I: What are randomizers and what is the multiworld" 
+title: "A tale down the archipelago part I, What are randomizers and what is the multiworld" 
 layout: post
 date: 7-04-2024
 
@@ -21,7 +21,7 @@ What is a randomized game!?
 
 <h2> Overview </h2>
 
-For the past seven months, I have been developing a mod for Hades to be able to play it in multi-world randomizer; Archipelago, and it has been a really fun and interesting experience! 
+For the past seven months, I have been developing a mod for Hades to be able to play it in a multiworld randomizer; Archipelago, and it has been a really fun and interesting experience! 
 However, if you are a normal person, the past sentence means nothing to you. What is a randomiser? what is a multiworld? why it is called Archipelago? In this post I plan
 to answer two of those questions, so in a follow up I can roughly explain how to get a game into Archipelago and what problems I run while working on Hades.
 
