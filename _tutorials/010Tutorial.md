@@ -1,7 +1,7 @@
 ---
 title: "A tale down the archipelago part II: How I got Hades into the multiworld" 
 layout: post
-date: 4-04-2024
+date: 10-04-2024
 
 image: 
   path: tutorials/images/009AP.png 

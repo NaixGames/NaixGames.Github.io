@@ -1,7 +1,7 @@
 ---
-title: "A tale down the archipelago part I, What are randomizers and what is the multiworld" 
+title: "A tale down the archipelago part I: What are randomizers and what is the multiworld" 
 layout: post
-date: 7-04-2024
+date: 4-04-2024
 
 image: 
   path: tutorials/images/009AP.png 
