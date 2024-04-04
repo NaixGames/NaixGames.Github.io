@@ -3,8 +3,6 @@ title: "A tale down the archipelago part II: How I got Hades into the multiworld
 layout: post
 date: 7-04-2024
 
-usemathjax: false
-
 image: 
   path: tutorials/images/009AP.png 
   thumbnail: tutorials/images/009AP.png

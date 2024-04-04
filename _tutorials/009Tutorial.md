@@ -3,8 +3,6 @@ title: "A tale down the archipelago part I: What are randomizers and what is the
 layout: post
 date: 7-04-2024
 
-usemathjax: false
-
 image: 
   path: tutorials/images/009AP.png 
   thumbnail: tutorials/images/009AP.png
@@ -59,6 +57,8 @@ As a final point of this section ... WHY? Why would anyone want this? There are 
 
 <h2> Multiworld randomizer </h2>
 
-Now you know what randomizers I can explain what a multiworld randomizer is.
+Now you know what randomizers I can explain what a multi-world randomizer is. The base concept is the same, but in this case, we do not randomized the items of only one game ... but several of them! Let me explain a bit how that works in theory.
+
+
 
 
