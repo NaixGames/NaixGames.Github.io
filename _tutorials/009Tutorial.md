@@ -90,4 +90,6 @@ To finish, we can summarize all the information from this section in the followi
 
 ![ArchipelagoDiagram](/tutorials/images/009ArchipelagoDiagram.png)
 
+<em>Diagram of the different programs of the Archipelago. Arrows represent where information is sent. </em>
+
 I hope this explains a bit about how multi-world randomizers work. Now; interested in bringing your favourite game into Archipelago? Then check the next entry in which I detail how I did this for Hades. Hopefully you will learn a thing or two.
